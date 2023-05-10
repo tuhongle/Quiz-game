@@ -9,8 +9,9 @@ html {
 }
 
 body {
+    height: 100vh;
     font-size: 1.6rem;
-    background-color: #2A2A2A;
+    background: url("https://www.nme.com/wp-content/uploads/2022/06/530366c1-4a48-4198-8822-af9d5d6d9554.jpeg") no-repeat center center / cover;
     color: #F8FCFB;
     text-align: center;
 }
@@ -34,6 +35,7 @@ section {
     font-size: 5vw;
     padding: 4vh 0;
     font-weight: 500;
+    text-shadow: 0 0 30px rgb(39, 12, 109);
 }
 
 .main-quiz select {
