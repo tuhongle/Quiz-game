@@ -1,0 +1,235 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: Poppins;
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: #2A2A2A;
+    color: #F8FCFB;
+    text-align: center;
+}
+
+section {
+    width: 50vw;
+}
+
+/* CSS for MAIN */
+
+.main-quiz {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+.main-quiz h1 {
+    font-size: 5vw;
+    padding: 4vh 0;
+    font-weight: 500;
+}
+
+.main-quiz select {
+    background-color: #E4526F;
+    width: 100%;
+    height: 7vw;
+    border-radius: 1.5vw;
+    padding-left: 2vw;
+    color: #F8FCFB;
+    font-size: 2.5vw;
+    margin-right: 2vw;
+    appearance: none;
+}
+
+.main-quiz input::placeholder {
+    color: rgba(248, 252, 251, 0.6);
+    letter-spacing: 0.2vw;
+}
+
+button {
+    background-color: #B2B9B7;
+    padding: 1vw 4vw;
+    border-radius: 4vw;
+    box-shadow: 0 2px 5px #F8FCFB;
+    font-weight: 700;
+    font-size: 3vw;
+    transition: transform 0.3s linear;
+}
+
+#start {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 4vw;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+option {
+    font-size: 0.7em;
+}
+
+/* CSS For Question */
+
+.question {
+    margin-top: 5vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    background-color: #E4526F;
+    align-items: flex-start;
+    padding: 3vw;
+    gap: 2vw;
+    border-radius: 3vw;
+    box-shadow: 1px 1px 5px grey;
+    font-size: 2vw;
+}
+
+span,
+i {
+    display: inline-block;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+#right,
+#wrong {
+    position: absolute;
+    font-size: 1.2em;
+    display: none;
+}
+
+#right {
+    color: green;
+}
+
+#wrong {
+    color: yellow;
+}
+
+.scores {
+    margin-left: auto;
+    display: flex;
+    gap: 1.5vw;
+    align-items: baseline;
+}
+
+#score b {
+    font-size: 120%;
+}
+
+.question_text {
+    text-align: left;
+}
+
+.question_answer {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    align-items: flex-start;
+}
+
+.question_answer input {
+    display: none;
+}
+
+.question_answer label {
+    position: relative;
+    padding-left: 4vw;
+}
+
+.question_answer label::before {
+    content: "";
+    position: absolute;
+    height: 70%;
+    aspect-ratio: 1;
+    background-color: #F8FCFB;
+    border-radius: 100%;
+    left: 1vw;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+input[type="radio"]:checked + label::after {
+    content: "";
+    position: absolute;
+    height: 50%;
+    aspect-ratio: 1;
+    background-color: rgba(228, 82, 111, 0.75);
+    border-radius: 100%;
+    left: 1.3vw;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.15s linear;
+}
+
+.button {
+    margin-left: auto;
+    display: flex;
+    gap: 4vw;
+}
+
+/* CSS For END */
+
+.end_button {
+    margin-top: 10vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    background-color: #E4526F;
+    align-items: flex-start;
+    padding: 3vw;
+    gap: 10vw;
+    border-radius: 3vw;
+    box-shadow: 1px 1px 5px grey;
+    font-size: 4vw;
+}
+
+.greeting {
+    position: relative;
+    width: 100%;
+}
+
+.greeting h3 {
+    position: absolute;
+}
+
+.result {
+    margin-left: auto;
+    display: flex;
+    gap: 1vw;
+    align-items: baseline;
+}
+
+#current_score {
+    text-decoration: underline;
+}
+
+.end_button,
+.question {
+    display: none;
+}
+
+@media only screen and (max-width: 500px) {
+    section {
+        width: 70vw;
+    }
+}

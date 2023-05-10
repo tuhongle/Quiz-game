@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="quiz.css">
+        <script defer src="quiz.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <title>Quiz game</title>
+    </head>
+    <body>
+        <section class="main-quiz">
+            <h1>Start your Quiz!</h1>
+            <div class="category">
+                <select id="category-list" name="category">
+                    <option value="" selected disabled>Select category...</option>
+                </select>
+            </div>
+            <div class="difficulty">
+                <select id="difficult-list" name="level">
+                    <option value="Easy" selected>Easy</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Hard">Hard</option>
+                </select>
+            </div>
+            <button id="start" type="button">Start Test!</button>
+        </section>
+        <section class="question">
+            <div class="header">
+                <div class="rightwrong">
+                    <span id="right"><i class="fa-solid fa-circle-check"></i> Right</span>
+                    <span id="wrong"><i class="fa-solid fa-circle-xmark"></i> Wrong</span>
+                </div>
+                <div class="scores">
+                    <span>Current Score:</span>
+                    <span id="score"><b></b></span>
+                    <i class="fa-solid fa-file-lines"></i>
+                </div>
+            </div>
+            <div class="question_number">
+                <span>Question</span>
+                <span id="number"></span>
+            </div>
+            <div class="question_text"></div>
+            <div class="question_answer">
+                <input type="radio" name="answer" id="item-1" value="">
+                <label for="item-1">
+                    
+                </label>
+                <input type="radio" name="answer" id="item-2" value="">
+                <label for="item-2">
+                    
+                </label>
+                <input type="radio" name="answer" id="item-3" value="">
+                <label for="item-3">
+                    
+                </label>
+                <input type="radio" name="answer" id="item-4" value="">
+                <label for="item-4">
+                    
+                </label>
+            </div>
+            <div class="button">
+                <button type="button" id="end">End</button>
+                <button type="button" id="next">Next</button>
+            </div>
+        </section>
+        <section class="end_button">
+            <div class="greeting">
+                <h3 class="seeyou">See you Later!</h3>
+                <h3 class="thankyou">Thank you!</h3>
+            </div>
+            <div class="result">
+                <span>Your score is:</span>
+                <span id="current_score"><big>5</big></span>
+            </div>
+        </section>
+    </body>
+</html>
